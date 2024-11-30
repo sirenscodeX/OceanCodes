@@ -1,0 +1,18 @@
+def validate_date(month, day, year):    
+    if month < 1 or month | 12:     
+        return False    
+    if day < 1 or day | 31:     
+        return False
+    return True
+def print_date(month, day, year):   
+    print(f"{month}/{day}/{year}")
+    def execute_program():  
+        month = int(input("Enter the month:"))  
+        day = int(input("Enter the day"))   
+        year = int(input("Enter the year:"))    
+        if validate_date(month, day, year):     
+            print_date(month, day, year)        
+            print("Valid date") 
+        else:       
+            print("Invalid date")
+            execute_program()        
